@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07FAF2B8-6A84-452F-9786-1333BBFF6C4C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RfidConnectRegister</RootNamespace>
+    <AssemblyName>RfidConnectRegister</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AvizheExcel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Caratble_990622\PersonalPayment\bin\Debug\AvizheExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="FastReport, Version=2017.1.22.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2017.1.22.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2017.1.22.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Service, Version=2017.1.22.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.VSDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Web, Version=2017.1.22.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="LabelPrinter, Version=1.1.8.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\LabelPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MR6100Api">
+      <HintPath>..\..\..\..\PeopleTracking\Momtaz\TDA_RFIDConnect_AntennaConnector-Ver6.0\TDA_RFIDConnect_AntennaConnector\bin\Debug\MR6100Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RfidApiLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RfidApiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2011.1.1000.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2011.1.1000.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.20.4.0.44\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.20.4.0.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=20.4460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.WinForms.20.4.0.44\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinessLogic\AppRegister\RegisteryClass.cs" />
+    <Compile Include="BussinessLogic\Classes\BLLConnectToUHFReader.cs" />
+    <Compile Include="BussinessLogic\Classes\ConfigKeys.cs" />
+    <Compile Include="BussinessLogic\Classes\ConnectTo6061.cs" />
+    <Compile Include="BussinessLogic\Classes\AvizheExcel.cs" />
+    <Compile Include="BussinessLogic\Classes\GetComPort.cs" />
+    <Compile Include="BussinessLogic\Classes\GetSettingDictionary.cs" />
+    <Compile Include="BussinessLogic\Classes\ShamsiCalendar.cs" />
+    <Compile Include="BussinessLogic\Classes\Tools.cs" />
+    <Compile Include="BussinessLogic\RfidConnectApi\ApiBusiness.cs" />
+    <Compile Include="BussinessLogic\RfidConnectApi\Connector.cs" />
+    <Compile Include="BussinessLogic\RfidConnectApi\RestAPI.cs" />
+    <Compile Include="BussinessLogic\RfidConnectApi\WorkingWithApiConnector.cs" />
+    <Compile Include="BussinessLogic\SchasualedSmsCreator.cs" />
+    <Compile Include="BussinessLogic\sms.cs" />
+    <Compile Include="BussinessLogic\TaskTrayApplicationContext.cs" />
+    <Compile Include="BussinessLogic\Time.cs" />
+    <Compile Include="BussinessLogic\Tools.cs" />
+    <Compile Include="BussinessLogic\ZPLHelper.cs" />
+    <Compile Include="BussinessLogic\ZPLHelperBase.cs" />
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="DataAccess\Items.cs" />
+    <Compile Include="DML\Document.cs" />
+    <Compile Include="DML\DynamicFieldDto.cs" />
+    <Compile Include="DML\EnterRequest.cs" />
+    <Compile Include="DML\GetRegisterRequestFilter.cs" />
+    <Compile Include="DML\MovementAction.cs" />
+    <Compile Include="DML\Print.cs" />
+    <Compile Include="DML\Product.cs" />
+    <Compile Include="DML\ProductBrand.cs" />
+    <Compile Include="DML\ProductGroup.cs" />
+    <Compile Include="DML\ProductionLine.cs" />
+    <Compile Include="DML\ProductionShift.cs" />
+    <Compile Include="DML\ProductPropertyC.cs" />
+    <Compile Include="DML\ProductSize.cs" />
+    <Compile Include="DML\ProductStatus.cs" />
+    <Compile Include="DML\ProductType.cs" />
+    <Compile Include="DML\Tag.cs" />
+    <Compile Include="DML\User.cs" />
+    <Compile Include="DML\WarehouseDto.cs" />
+    <Compile Include="DML\Zones.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="BussinessLogic\AppRegister\AssemblyInfo.cs" />
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\formSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\formSetting.Designer.cs">
+      <DependentUpon>formSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmShowAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmShowAlert.Designer.cs">
+      <DependentUpon>frmShowAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmCancelRegisterTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmCancelRegisterTag.Designer.cs">
+      <DependentUpon>frmCancelRegisterTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmChangeTagRegisterData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmChangeTagRegisterData.Designer.cs">
+      <DependentUpon>frmChangeTagRegisterData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmDefineProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmDefineProducts.Designer.cs">
+      <DependentUpon>frmDefineProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmDefineProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmDefineProductType.Designer.cs">
+      <DependentUpon>frmDefineProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmOnlyPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmOnlyPrint.Designer.cs">
+      <DependentUpon>frmOnlyPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmPrintRegsiterTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmPrintRegsiterTags.Designer.cs">
+      <DependentUpon>frmPrintRegsiterTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRepCancelRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRepCancelRegister.Designer.cs">
+      <DependentUpon>frmRepCancelRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRepErrorInRegisterTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRepErrorInRegisterTag.Designer.cs">
+      <DependentUpon>frmRepErrorInRegisterTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRepRegisterTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRepRegisterTag.Designer.cs">
+      <DependentUpon>frmRepRegisterTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRFIDRegisterByBarfid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmRFIDRegisterByBarfid.Designer.cs">
+      <DependentUpon>frmRFIDRegisterByBarfid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmSearchProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmSearchProducts.Designer.cs">
+      <DependentUpon>frmSearchProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmSetParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmSetParent.Designer.cs">
+      <DependentUpon>frmSetParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmStoreRegisterTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmStoreRegisterTags.Designer.cs">
+      <DependentUpon>frmStoreRegisterTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmTestRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmTestRegister.Designer.cs">
+      <DependentUpon>frmTestRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmTestRegisterGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreProduct\frmTestRegisterGroup.Designer.cs">
+      <DependentUpon>frmTestRegisterGroup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\formSetting.resx">
+      <DependentUpon>formSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmShowAlert.resx">
+      <DependentUpon>frmShowAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmCancelRegisterTag.resx">
+      <DependentUpon>frmCancelRegisterTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmChangeTagRegisterData.resx">
+      <DependentUpon>frmChangeTagRegisterData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmDefineProducts.resx">
+      <DependentUpon>frmDefineProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmDefineProductType.resx">
+      <DependentUpon>frmDefineProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmOnlyPrint.resx">
+      <DependentUpon>frmOnlyPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmPrintRegsiterTags.resx">
+      <DependentUpon>frmPrintRegsiterTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmRepCancelRegister.resx">
+      <DependentUpon>frmRepCancelRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmRepErrorInRegisterTag.resx">
+      <DependentUpon>frmRepErrorInRegisterTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmRepRegisterTag.resx">
+      <DependentUpon>frmRepRegisterTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmRFIDRegisterByBarfid.resx">
+      <DependentUpon>frmRFIDRegisterByBarfid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmSearchProducts.resx">
+      <DependentUpon>frmSearchProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmSetParent.resx">
+      <DependentUpon>frmSetParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmStoreRegisterTags.resx">
+      <DependentUpon>frmStoreRegisterTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmTestRegister.resx">
+      <DependentUpon>frmTestRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreProduct\frmTestRegisterGroup.resx">
+      <DependentUpon>frmTestRegisterGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BussinessLogic\BarCode\" />
+    <Folder Include="BussinessLogic\Printe\" />
+    <Folder Include="BussinessLogic\RfidReader\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeskRFID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ست-اداری.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode-ol-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RFD_03-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_print_172530.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_settings_326699.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_icon.ico" />
+    <None Include="Resources\715bf10a-6de7-4ed1-b61d-c09a891d6683.jfif" />
+    <None Include="Resources\17005.jpg" />
+    <None Include="Resources\654116.png" />
+    <None Include="Resources\iconfinder_Folder_Paper_Files_File_Case_Browse_Folder_Archive_4265035.png" />
+    <None Include="Resources\best-free-open-source-Warehouse-Management-Software %281%29.png" />
+    <None Include="Resources\1665159223384.png" />
+    <None Include="Resources\0001998.jpeg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\logo_icon.ico" />
+    <None Include="Resources\141_tr.png" />
+    <None Include="Resources\14_tra.png" />
+    <None Include="Resources\iconfinder_refresh_430112.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\141.jpg" />
+    <None Include="Resources\14.jpg" />
+    <None Include="Resources\9-9-9.jpg" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\9-9.jpg" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\Search-Icon.PNG" />
+    <None Include="Resources\printdataon1.png" />
+    <None Include="Resources\sssssss.png" />
+    <None Include="Resources\best-free-open-source-Warehouse-Management-Software .jpg" />
+    <None Include="Resources\1520081525031.jpg" />
+    <None Include="Resources\5fc76d9e8d748db3089a489cdd492d4b-barcode-scanning-icon-by-vexels.png" />
+    <None Include="Resources\rfidasd.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\414-4145402_the-rfid-industry-witnessed-prosperity-and-resonance-rfid-tag-icon-png.png" />
+    <None Include="Resources\132-1324872_rf-icon-rfid-card-reader-icon.png" />
+    <None Include="Resources\kiosk.png" />
+    <None Include="Resources\registerdataon.png" />
+    <None Include="Resources\printdataon.png" />
+    <None Include="Resources\importDataoff.png" />
+    <None Include="Resources\registerdataoff.png" />
+    <None Include="Resources\printdataoff.png" />
+    <None Include="Resources\importDataon.png" />
+    <None Include="Resources\585e4831cb11b227491c338e.png" />
+    <None Include="Resources\calendar-icon.png" />
+    <None Include="Resources\clock-deadline-management-schedule-time-timer-watch-384f4b02cfe4e813-512x512.png" />
+    <None Include="Resources\back-icon.png" />
+    <None Include="Resources\calendar-512.png" />
+    <None Include="Resources\images %286%291.jpg" />
+    <None Include="Resources\images %286%29.jpg" />
+    <None Include="Resources\images %286%29.png" />
+    <None Include="Resources\75-752131_free-expand-icon-hd-png-download.png" />
+    <None Include="Resources\{0DAFB3F7-2E97-4C00-865F-183671ACEA02}.png.jpg" />
+    <None Include="Resources\Untitled-15-512.png" />
+    <None Include="Resources\Untitled-17-512.png" />
+    <None Include="Resources\Untitled-1.jpg" />
+    <None Include="Resources\Arrow_Green.png" />
+    <None Include="Resources\Arrow_Gray.png" />
+    <None Include="Resources\exit_Icon.png" />
+    <None Include="Resources\if_print_1608799.png" />
+    <None Include="Resources\icons8-hammer-100.png" />
+    <None Include="Resources\if_home_126572.png" />
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
