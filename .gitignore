@@ -18,7 +18,7 @@
 x64/
 x86/
 bld/
-# [Bb]in/
+[Bb]in/
 [Oo]bj/
 [Ll]og/
 
@@ -259,6 +259,11 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# macOS
+.DS_Store
+Thumbs.db
+
 /bin/Debug/14001005_new2.rar
 /bin/Debug/14001006_new.rar
 /RfidConnectRegister/changeLog.txt
